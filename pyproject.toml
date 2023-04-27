@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "cnpjs"
+version = "0.1.0"
+description = ""
+authors = ["Silas Genário <sg.lopes26@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^1.5.3"
+jupyterlab = "^3.5.2"
+requests = "^2.28.2"
+duckdb = "^0.6.1"
+tqdm = "^4.64.1"
+openpyxl = "^3.0.10"
+
+[tool.poetry.scripts]
+get_cnpjs_info = "cnpjs.cnpjs_info:get_and_insert_cnpj_info_in_db"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
